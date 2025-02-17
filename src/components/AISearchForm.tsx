@@ -106,9 +106,9 @@ const AISearchForm = () => {
               <FaMoneyBill className="absolute top-3 left-3 text-gray-400" />
               <input
                 type="range"
-                min="100000"
-                max="100000000"
-                step="100000"
+                min="10000"
+                max="10000000"
+                step="1000"
                 value={budget}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => setBudget(Number(e.target.value))}
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 mt-4"
