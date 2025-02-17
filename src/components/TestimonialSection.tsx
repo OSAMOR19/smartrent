@@ -1,13 +1,10 @@
-'use client'
-
-import React from 'react'
+"use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import Avt1 from "@/Images/avt3.png"
-import Avt2 from "@/Images/avt4.png"
-import Avt3 from "@/Images/avt5.png"
-import Avt4 from "@/Images/avt6.png"
-
+import Avt1 from "../../src/images/avt3.png"
+import Avt2 from "../../src/images/avt4.png"
+import Avt3 from "../../src/images/avt5.png"
+import Avt4 from "../../src/images/avt6.png"
 
 const testimonials = [
   {
@@ -38,14 +35,14 @@ const testimonials = [
 
 export default function TestimonialSection() {
   return (
-    <section className="py-20 bg-indigo-50">
+    <section className="py-20 bg-indigo-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 dark:text-gray-100">What Our Users Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-lg p-6"
+              className="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -59,11 +56,11 @@ export default function TestimonialSection() {
                   className="rounded-full"
                 />
                 <div className="ml-4">
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-gray-600 text-sm">{testimonial.role}</p>
+                  <h4 className="font-semibold dark:text-gray-100">{testimonial.name}</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+              <p className="text-gray-700 dark:text-gray-300 italic">"{testimonial.quote}"</p>
             </motion.div>
           ))}
         </div>
@@ -71,3 +68,4 @@ export default function TestimonialSection() {
     </section>
   )
 }
+

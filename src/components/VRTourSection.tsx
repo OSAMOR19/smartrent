@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export default function VRTourSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center">
           <motion.div
@@ -12,12 +12,12 @@ export default function VRTourSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold mb-4">Experience Homes in VR</h2>
-            <p className="text-xl text-gray-600 mb-6">
+            <h2 className="text-3xl font-bold mb-4 dark:text-gray-100">Experience Homes in VR</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
               Take virtual tours of properties from the comfort of your home. Our immersive VR experience lets you
               explore every corner before scheduling a visit.
             </p>
-            <button className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <button className="bg-indigo-600 dark:bg-indigo-500 text-white px-8 py-3 rounded-full hover:bg-indigo-700 dark:hover:bg-indigo-600 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Try VR Tour Now
             </button>
           </motion.div>
